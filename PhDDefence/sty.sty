@@ -1,0 +1,185 @@
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{transparent}
+\usepackage[default,scale=1]{opensans}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{xcolor,colortbl}
+
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\definecolor{Gray}{gray}{0.85}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\usepackage{hhline,longtable}
+%\input{sty.tex}
+
+\usepackage{multicol}
+\usepackage{multirow}
+
+\newsavebox{\bmatrixbox}
+\newenvironment{colorbmatrix}
+  {\begin{lrbox}{\bmatrixbox}
+   \mathsurround=0pt
+   $\displaystyle
+   \begin{bmatrix}}
+  {\end{bmatrix}$%
+   \end{lrbox}%
+   \usebox{\bmatrixbox}%
+   \kern-\wd\bmatrixbox
+   \makebox[0pt][l]{$\left[\vphantom{\usebox{\bmatrixbox}}\right.$}%
+   \kern\wd\bmatrixbox
+}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{threeparttable}
+
+\usepackage{tabularx,booktabs}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X} % centered version of "X" type
+\setlength{\extrarowheight}{1pt}
+
+ \newcolumntype{b}{>{\centering\arraybackslash\hsize=2.3\hsize}X}
+\newcolumntype{s}{>{\centering\arraybackslash\hsize=.45\hsize}X}
+\newcolumntype{m}{>{\centering\arraybackslash\hsize=.9\hsize}X}
+
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+
+\setlist[enumerate, 1]{label =\textbf{\arabic*.}}
+\setlist[enumerate, 2]{label =\textbf{\theenumi \alph*}}
+\usepackage{array,multirow}
+
+\mode<presentation>
+{
+	\usefonttheme{structurebold}  % or try serif, structurebold, ...
+%Uncomment the following to display navigation symbols
+	\setbeamertemplate{navigation symbols}{}
+	%Constructing the frame title
+	\setbeamertemplate{frametitle}{% 
+		\kern1em\hskip-15pt
+		\usebeamercolor[fg]{section}% 
+		\usebeamerfont{section}% 
+		\insertsection \hspace{0,1em} - {\normalsize \insertframetitle}
+	}
+	%Constructing the footline
+	\setbeamertemplate{footline}{% 
+		\kern1em\hskip3em% 
+		\includegraphics[width=0.3\textwidth]{ntnulogo_eng.png}
+		\hfill% 
+		\usebeamercolor[fg]{page number in head/foot}% 
+		\usebeamerfont{page number in head/foot}% 
+		\insertframenumber%
+%Uncomment the following line to display the total number of pages in the footnote
+		%\,/\,\inserttotalframenumber
+		\hskip12pt%
+		\kern1.5em\vskip2em% 
+}
+	%Defining fonts
+	\setbeamerfont{title}{shape=\bfseries, size=\huge}
+	\setbeamerfont{subtitle}{series=\mdseries,size=\Large}
+	
+	%Defining the colors. Here you can find more elements whose color can be modified:
+	%http://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf
+	\definecolor{NTNUBlue}{HTML}{00509e}
+	\definecolor{LightGrey}{HTML}{D3D3D3}
+	\setbeamercolor{background canvas}{bg=NTNUBlue}
+	\setbeamercolor{title}{fg=white}
+	\setbeamercolor{subtitle}{fg=white}
+	\setbeamercolor{date}{fg=LightGrey}
+	\setbeamercolor{author}{fg=LightGrey}
+	\setbeamercolor{frametitle}{fg=NTNUBlue}
+	\setbeamercolor{itemize item}{fg=NTNUBlue}
+	\setbeamercolor{enumerate item}{fg=NTNUBlue}
+	\setbeamercolor{block title}{bg=red!30,fg=NTNUBlue}
+	\setbeamercolor{itemize subitem}{fg=NTNUBlue}
+	\setbeamercolor{enumerate subitem}{fg=NTNUBlue}
+} 
+	\usepackage{hyperref}
+	\hypersetup{
+	colorlinks=true,% make the links colored
+	linkcolor=NTNUBlue,
+	urlcolor=NTNUBlue
+	}
+	% Enforcing the final page
+	\AtEndDocument{\begin{frame}[plain, noframenumbering]
+		\begin{center}
+			\vspace{4em}
+			{\huge Thank you for your attention}\\
+			\vspace{5em}
+			\includegraphics[width=0.7\textwidth]{ntnulogo_eng.png}
+		\end{center}
+	\end{frame}
+	}
+	
+	
+
+	
+	
+	
+	\usepackage[style=verbose]{biblatex}
+
+\usepackage{filecontents}% to embed the file `myreferences.bib` in your `.tex` file
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+
+% beamer: How to place images behind text (z-order)
+% (http://tex.stackexchange.com/a/134311)
+\makeatletter
+\newbox\@backgroundblock
+\newenvironment{backgroundblock}[2]{%
+  \global\setbox\@backgroundblock=\vbox\bgroup%
+    \unvbox\@backgroundblock%
+    \vbox to0pt\bgroup\vskip#2\hbox to0pt\bgroup\hskip#1\relax%
+}{\egroup\egroup\egroup}
+\addtobeamertemplate{background}{\box\@backgroundblock}{}
+\makeatother
+
+
+\makeatletter
+\newcommand{\srcsize}{\@setfontsize{\srcsize}{5pt}{5pt}}
+\makeatother
+
+\usepackage{amsmath,mathtools}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Costum block
+\newenvironment{variableblock}[3]{%
+  \setbeamercolor{block body}{#2}
+  \setbeamercolor{block title}{#3}
+  \begin{block}{#1}}{\end{block}}
+  
+  \setbeamercolor{block body alerted}{bg=alerted text.fg!10}
+\setbeamercolor{block title alerted}{bg=alerted text.fg!20}
+\setbeamercolor{block body}{bg=structure!10}
+\setbeamercolor{block title}{bg=structure!20}
+\setbeamercolor{block body example}{bg=green!10}
+\setbeamercolor{block title example}{bg=green!20}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%my colors%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{mine1}{RGB}{255, 128, 0}
+\definecolor{mine2}{RGB}{255, 202, 23}
+

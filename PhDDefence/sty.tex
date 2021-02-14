@@ -1,0 +1,308 @@
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  TiTle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[titletoc,toc,page]{appendix}
+\renewcommand{\restoreapp}{}
+
+\usepackage{ragged2e}
+
+
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+
+
+
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{1em}
+%\renewcommand{\baselinestretch}{2.0}
+
+\usepackage{fourier}
+\usepackage{booktabs}
+\usepackage{threeparttablex}
+\usepackage{longtable} 
+\usepackage{lscape} 
+
+
+\makeatletter
+\newcommand\notsotiny{\@setfontsize\notsotiny\@vipt\@viipt}
+\makeatother
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+\usepackage{threeparttable}
+
+\usepackage{hyperref} 
+\hypersetup{colorlinks=true,                
+    breaklinks=true,                
+    urlcolor= blue,                
+    linkcolor= blue,                
+    bookmarksopen=false,
+    filecolor=black,
+    citecolor=green,
+    linkbordercolor=blue
+}
+\urlstyle{same}
+
+\usepackage{amsmath} %equations and spacings
+\usepackage{eurosym}
+\usepackage{lipsum} % acces to random text
+%graphics
+\usepackage{graphicx}
+%\usepackage[demo]{graphicx}
+%caption styles
+\usepackage[small,bf]{caption}
+%\usepackage{caption}
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})} % see subcaption doc
+%<<byman 
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{sidecap}
+%byman>>
+
+%<<byman
+%% We want UK-english hyphenation patterns.byman
+%\usepackage[british]{babel}
+%byman>>
+
+%Remove Paragraph indenting
+\setlength{\parindent}{0.0in} 
+\setlength{\parskip}{0.1in}
+
+%<<byman
+%% Use scalable, PostScript Type 1 versions of the Computer Modern fonts.
+\usepackage{type1cm}
+%% Replace the standard Computer Modern Typewriter font LaTeX uses
+%% for monospace text with the PostScript font Adobe Courier.
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{times}
+%% Redefine the font used for the section headings to
+%% Helvetica-Narrow Bold.
+% for colour shades in tables 
+\usepackage{colortbl} 
+ %to control the title formating and spaces around the titles
+ \usepackage{pdfpages}
+\usepackage[compact]{titlesec}
+%%byman>>
+
+%spaces under sections
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+%fonts
+ %\usepackage[T1]{fontenc} %gives light font
+ %\usepackage[light,math]{iwona}
+
+%Abbreviations or Acronyms
+%\usepackage[intoc]{nomencl}
+\usepackage{nomencl}
+\renewcommand{\nomname}{List of Abbreviations}
+\makenomenclature
+
+\usepackage{csquotes}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Import from Sigurd Thesis
+
+
+
+
+%Bibliography
+%\usepackage{url}
+%\usepackage{natbib}%\usepackage[sectionbib]{natbib}
+%\usepackage{chapterbib}
+%\bibpunct[:]{(}{)}{;}{a}{}{,} %citation structure
+%\bibpunct{(}{)}{,}{a}{}{;} 
+%\bibpunct{[}{]}{,}{a}{}{;}
+%\bibpunct{(}{)}{;}{a}{}{,} % to follow the A&A style
+%\usepackage{chapterbib}
+%\usepackage{hyperref}
+%\hypersetup{colorlinks=true,citecolor=blue}
+%\hypersetup{colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue}
+
+%To change box color around the links and citations, you have these other options :
+%\hypersetup{citebordercolor=Violet,filebordercolor=Red,linkbordercolor=Blue}
+
+\newcommand{\cmt}[1]{}%inline comment
+  
+%tabularx
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{multirow,longtable} %table on several pages
+\usepackage{booktabs}
+
+%enumerate(control spacing)
+\newenvironment{packed_enum}{
+\begin{enumerate}
+	\vspace*{-1}
+  	\setlength{\itemsep}{1pt}
+  	\setlength{\parskip}{0pt}
+  	\setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+%<<byman
+\usepackage{multirow}
+\usepackage{dcolumn}
+\newcolumntype{d}{D{.}{.}{-2}}
+\newcommand{\tabincell}[1]{\begin{tabular}{c}#1\end{tabular}}
+\newcommand{\tabincellt}[1]{\begin{tabular}{l}#1\end{tabular}}
+\newcommand{\merge}[1]{\multicolumn{1}{c}{#1}}
+
+\usepackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+% Used to create tables with rows/cols spanning over se
+%% Use fancy chapter headers, with Jos Dingjan's modifications,
+%% plus my own tweaks. This style is not part of teTeX,
+%% so we are using a local (and renamed) copy.
+%\usepackage[Lenny]{fncychapleo}
+\usepackage{fncychap}
+
+%% Nicely format and linebreak URLs in the bibliography (and elsewhere).
+%%\usepackage{url}
+%% Define a new 'leo' style for the package that will use a smaller font.
+%\makeatletter
+%\def\url@leostyle{%
+%  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+%\makeatother
+%% Now actually use the newly defined style.
+%\urlstyle{leo}
+%byman>>
+
+%graphics
+\usepackage{epstopdf} %support for eps.
+\DeclareGraphicsExtensions{.eps,.ps,.pdf,.png,.jpg}
+\usepackage{float} % figure placing [H]
+
+%landscape Option
+\usepackage{lscape} %Left down
+%usepackage{pdflscape} %Left up)
+
+\usepackage[draft]{todonotes}   % notes showed (JJUNJU)
+% Select what to do with command \comment:  
+% \newcommand{\comment}[1]{}  %comment not showed
+\newcommand{\comment}[1]
+{\par {\bfseries \color{red} #1 \par}} %comment showed
+
+%Section Numbering and TOC depth
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{3}
+
+%chapter biblio
+%\usepackage{chapterbib}
+
+%Drawing flow charts
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{process} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{output} = [trapezium,draw, trapezium left angle=70,trapezium right angle=-70,fill=pink, text width=3em, minimum height=2em,text centered]
+\tikzstyle{data} = [trapezium,draw, trapezium left angle=70,trapezium right angle=-70,fill=white!20, text width=3em, minimum height=2em,text centered]
+\tikzstyle{space} = [rectangle, fill=white,opacity=0,text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{results} = [ellipse,draw,fill=white, text width=4em, minimum height=3em,text centered]
+
+%To generate list of symbols
+\newcommand{\addsymbol}[3]{%
+  \symboldisplay{#1}{#2}\\%
+  \setelem{#3}{#1}
+}
+\newcommand{\symboldisplay}[2]{%
+  $#1$ \parbox{5in}{\dotfill #2}%
+  %$#1$ \parbox{5in}{ #2}%
+}
+%\def\setelem#1{\expandafter\def\csname myarray(#1)\endcsname}
+\def\setelem#1{\expandafter\gdef\csname myarray(#1)\endcsname}
+\def\dispsymbol#1{\csname myarray(#1)\endcsname} 
+
+\usepackage{enumerate}
+
+
+
+
+\usepackage{amsfonts}
+\usepackage{tabularx,booktabs}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X} % centered version of "X" type
+\setlength{\extrarowheight}{1pt}
+
+ \newcolumntype{b}{>{\centering\arraybackslash\hsize=2.3\hsize}X}
+\newcolumntype{s}{>{\centering\arraybackslash\hsize=.45\hsize}X}
+\newcolumntype{m}{>{\centering\arraybackslash\hsize=.9\hsize}X}
+
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}%
+\setcounter{MaxMatrixCols}{20}
+
+
+
+
+
+
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[numbers]{natbib}
+\usepackage{rotating}
+
+\usepackage{nomencl}
+\usepackage{tabularx,booktabs}
+\newcolumntype{C}{>{\centering\arraybackslash}X} % centered version of "X" type
+\setlength{\extrarowheight}{1pt}
+\usepackage{lipsum}
+
+%usepackage[hidelinks]{hyperref}
+%for columns spanning multiple rows in tables
+\usepackage{multirow}
+%use the booktabs package to get (much!) better vertical spacing above and below "rules" (horizontal lines), resulting in a much more professional look of your tables.
+%use the colortbl package to add color to tables.
+\usepackage{booktabs,colortbl}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+% correct bad hyphenation here
+%\hyphenation{op-tical net-works semi-conduc-tor}
+
+  \renewcommand\footnoterule{\vspace*{-3pt}%
+     \hrule width 2in height 0.4pt
+     \vspace*{2.6pt}}
+\usepackage[shortlabels]{enumitem}
