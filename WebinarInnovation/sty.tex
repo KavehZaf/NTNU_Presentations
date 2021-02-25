@@ -1,6 +1,5 @@
 \usetheme{Berkeley}
-\usepackage{graphicx}
-\usepackage{booktabs}
+
 \usepackage[english]{babel}
 
 \logo{\includegraphics[height=2cm]{ntnulogo_eng2}}
@@ -37,8 +36,7 @@
   \setbeamercolor{block body alerted}{bg=alerted text.fg!10}
 \setbeamercolor{block title alerted}{bg=alerted text.fg!20}
 \setbeamercolor{block body}{bg=structure!10}
-\setbeamercolor{block title}{bg=structure!20}
-\setbeamercolor{block body example}{bg=green!10}
+\setbeamercolor{block title}{bg=black!70,fg=white}\setbeamercolor{block body example}{bg=green!10}
 \setbeamercolor{block title example}{bg=green!20}
 
 \setbeamertemplate{blocks}[rounded][shadow=true]
@@ -54,4 +52,17 @@
 %%%%%%%%%%%%%%%%%%27-10-2020
 \usepackage[T1]{fontenc}
 
+
+%%%%%%%%%%%%%%%%%21-02-2021
+% Here I would like to make a new command to change the transparency of a photo and put it as a background photo
+\usepackage{tikz}
+
+%%%%%%%%%%% 22-02-2021
+% Changing the color of itemize item in beamer
+% 1 item
+
+%\setbeamertemplate{itemize item}{\color{Gray}$\blacksquare$}
+% 2 enumrate
+%\setbeamertemplate{enumerate item}[square]
+%\usecolortheme{Gray}
 
