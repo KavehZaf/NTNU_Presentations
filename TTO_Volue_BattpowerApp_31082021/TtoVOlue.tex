@@ -19,6 +19,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{The purpose of this presentation: Results}
+
+\begin{table}
+\small
+\def\firstrowcolor{}
+\def\secondrowcolor{}
+\onslide<1->{\def\firstrowcolor{\rowcolor{Gray}}}
+\caption{Charge Scheduling Strategies}
+\label{tab:termination}
+\begin{tabular}{l c c} 
+\hline
+ \firstrowcolor Method &  \begin{tabular}[c]{@{}c@{}}Max EV\\ hosting Capacity\end{tabular}&  \\  
+  Uncoordinated/Dumb Charging& 20\%& \includegraphics[width=.1\textwidth]{Figures/RedMark.png} \\
+ \onslide<1->{Energy price based &  36\%& \includegraphics[width=.1\textwidth]{Figures/YellowMark.png}} \\
+ \onslide<1->{\begin{tabular}[c]{@{}l@{}}Energy price and\\ congestion management based\end{tabular}& 100\%& \includegraphics[width=.1\textwidth]{Figures/GreenMark.png} }\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Purpose/Content}
 \begin{frame}{The presenation goal}
 \begin{itemize}
@@ -31,7 +55,7 @@
 \begin{tabular}{|l l|} 
 \hline
 \rowcolor{Gray} \textbf{Project Name:} &BATTPOWER \\
-\textbf{Presentation Time:}& 20 min \\
+\textbf{Presentation Time:}& 30 min \\
 \hline
 \end{tabular}
 \end{center}
@@ -64,7 +88,7 @@
 \begin{frame}{Sustainability/Green shift/CO\textsubscript{2} reduction}
 \begin{alertblock}{\textcolor{red}{For many reasons power electricity grid is facing decentralization}}
 \begin{itemize}
-\item Phasing out coal and nuclear power plants
+\item Phasing out coal (carbon-heavy sources of production) and nuclear power plants
 \item Increase penetration of solar and wind production
 \item Many other points ...
 \end{itemize}
@@ -81,28 +105,32 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\begin{frame}{GIFs in Beamer}
+\centering
+\animategraphics[loop,width=4cm]{10}{Figures/gif/Thanks-}{0}{6}
+\end{frame}
 
 \section{Background}
 \begin{frame}{Background}
-\begin{block}{Notes}
+\begin{block}{Items}
+
 \begin{itemize}
-\item <1-> Green shift in electircity systems is needed for the reduction of $\mathrm{CO_2}$ emissions
+\item <1-> \small Green shift in electircity systems is needed for the reduction of $\mathrm{CO_2}$ emissions
 \begin{itemize}
-\item<2-> Integration of Distributed Energy Resources (DER) is a huge challenge
+\item<2-> \tiny  Integration of Distributed Energy Resources (DER) is a huge challenge
 \end{itemize}
-\only<2>{ \begin{alertblock}{Note}
-DER includes Renewable Energy, Energy Storage, Electric Vehicles and Flexible Demand
+\only<2>{ \begin{alertblock}{\tiny Note}
+{\tiny DER includes Renewable Energy, Energy Storage, Electric Vehicles and Flexible Demand}
 \end{alertblock}}
-\item<3-> Grid companies must be able to analyse the impacts of DER 
+\item<3->\small Grid companies must be able to analyse the impacts of DER 
 \only<4>{ \begin{alertblock}{Note}
-\textbf{Optimal Power Flow (OPF)} solvers are essential
+\textbf{\tiny Optimal Power Flow (OPF)}{\tiny solvers are essential}
 \end{alertblock}}
-\item<5-> The inegration of DER in smart grids calls for \textbf{much more sophisticated solvers} for OPF
+\item<5->\small The inegration of DER in smart grids calls for \textbf{much more sophisticated solvers} for OPF
 \end{itemize}
 \end{block}
 \begin{figure}
-\includegraphics[scale=0.1]{Figures/PowerSys.png}
+\includegraphics[scale=0.06]{Figures/PowerSys.png}
  \caption{A Typical Power System \textcolor{gray}{\tiny[Rochester Gas \& Electricity]}}
 \end{figure}
 
@@ -173,7 +201,7 @@ DER includes Renewable Energy, Energy Storage, Electric Vehicles and Flexible De
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Solution:}
-\begin{block}{High-Performance Solver [\1-2]\ }
+\begin{block}{High-Performance Solver [1-2]}
 \begin{itemize}
 {\scriptsize
 \item Algorithmic design tailored to the conventional OPF algorithms speed-up the solution proposal
@@ -193,7 +221,6 @@ DER includes Renewable Energy, Energy Storage, Electric Vehicles and Flexible De
 \item S. Zaferanlouei, et al., “BATTPOWER Application: Large-Scale Integration of EVs in an Active Distribution Grid ---A Norwegian Case Study”, Electric Power Systems Research}
  \end{enumerate}
 \end{frame}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
