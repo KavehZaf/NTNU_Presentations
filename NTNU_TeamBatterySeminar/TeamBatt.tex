@@ -71,19 +71,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Background}
-%\begin{frame}{Electricity Grid}
-%\begin{figure}[!htbp]
-%\centering
-%\includegraphics[width=2.8 in , height=2.4 in]{Figures/EVchalendge1.png}
-%\caption{\tiny[www.sciencedirect.com/science/article/pii/B9781845697846500019]}
-%\end{figure}
-%\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[plain]
 \begin{tikzpicture}[overlay, remember picture]
 \node[anchor=center] at (current page.center) {
@@ -93,6 +80,19 @@
 \end{tikzpicture}
 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background}
+\begin{frame}{Electricity Grid}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=2.8 in , height=2.4 in]{Figures/EVchalendge1.png}
+\caption{\tiny[www.sciencedirect.com/science/article/pii/B9781845697846500019]}
+\end{figure}
+\end{frame}
+
 
 
 
@@ -105,9 +105,8 @@
 \begin{frame}{Sustainability/Green shift/CO\textsubscript{2} reduction}
 \begin{alertblock}{\textcolor{red}{For many reasons power electricity grid is facing decentralization}}
 \begin{itemize}
-\item Phasing out coal (carbon-heavy sources of production) and nuclear power plants
-\item Increase penetration of solar and wind production
-\item Many other points ...
+\item<1-> Phasing out coal (carbon-heavy sources of production) and nuclear power plants
+\item<2-> Increase penetration of solar and wind production
 \end{itemize}
 \end{alertblock}
 \begin{columns}
@@ -119,29 +118,12 @@
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Power System--- Today}
-%\centering
-%\animategraphics[loop,width=10cm]{12}{Figures/gif/Today/01-}{0}{115}
-%\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Power System--- Future}
-%\centering
-%\animategraphics[loop,width=10cm]{12}{Figures/gif/Future/01-}{0}{98}
-%\end{frame}
-
 
 \section{Background}
-\begin{frame}{Background}
+\begin{frame}{Background: cont.}
 \begin{block}{Items}
 \begin{itemize}
-\item <1-> \small Green shift in electircity systems is needed for the reduction of $\mathrm{CO_2}$ emissions
+\item <1-> \small Green shift in electricity systems is needed for the reduction of $\mathrm{CO_2}$ emissions
 \begin{itemize}
 \item<2-> \tiny  Integration of Distributed Energy Resources (DER) is a huge challenge
 \end{itemize}
@@ -168,16 +150,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Challenges in the planning and operation of the grid}
 \begin{itemize}
-\item \textbf{Planning:} Optimizing the right type, size and timing of new grid investments
+\item<1-> \textbf{Planning:} Optimizing the right type, size and timing of new grid investments
 \begin{itemize}
 \item Local generation (e.g. PV) and increased load (e.g. EVs)  can be located in areas where the grid is weak
 \item Energy storage and demand flexibility are alternatives to grid reinforcements
 \end{itemize}
 
-\item \textbf{Operation:}Optimize the use of controllable assets such as ESS and flexible demand to secure, reliable and economic operation of the distribution grids
+\item<2-> \textbf{Operation:}Optimize the use of controllable assets such as energy storage and flexible demand to secure, reliable and economic operation of the distribution grids. This means:
 \begin{itemize}
-\item Making the right use of Demand Response and being able to value the use of end-user flexibility for local or system-wide grid services
-\item Simulating and optimizing the grids in the presence of \textbf{local markets for energy and flexibility}
+\item Making the right use of Demand Response
+\item being able to value the use of end-user flexibility for local or system-wide grid services
+\item Simulating and optimizing the grids in the presence of \textbf{future local markets for energy and flexibility}
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -192,25 +175,24 @@
 \begin{block}{Notes}
 {\scriptsize 
 \begin{itemize}
-\item Classical single-period OPF does not offer a possibility for optimal operational scheduling of storage and flexible demand
-\item  We therefore aim to develop the foundations for a new generation of Multi-Period OPF (MPOPF) solvers 
+\item<1-> Classical single-period OPF does not offer a possibility for optimal operational scheduling of storage and flexible demand
+\item<2->  We therefore aim to develop the foundations for a new generation of Multi-Period OPF (MPOPF) solvers 
 \begin{enumerate}[i.]
 {\tiny
 \item Solves the OPF problem over several coupled time-steps
 \item Computation time is an issue when using both commercial or free optimization solvers
 }
 \end{enumerate}
-\item MPOPF is an extremely challenging scientific task:
+\item<3-> MPOPF is an extremely challenging scientific task:
 \begin{enumerate}[i.]
 {\tiny
 \item Nonlinearity
 \item Large-scale problem with respect with to time and space
-\item Involves stochastic generations and load
-\item Security of supply}
+\item Involves stochastic generations and load}
 \end{enumerate}
 \end{itemize}}
-\begin{alertblock}{Hardware is reaching its limit with respect to CPU clock speed}
-\end{alertblock}
+\onslide<4>{\begin{alertblock}{Hardware is reaching its limit with respect to CPU clock speed}
+\end{alertblock}}
 \end{block}
 \begin{backgroundblock}{10mm}{50mm}
  \begin{tikzpicture}
@@ -229,28 +211,57 @@
 \begin{frame}{Solution:}
 \begin{block}{High-Performance Solver [1-2]}
 \begin{itemize}
-{\scriptsize
-\item Algorithmic design tailored to the conventional OPF algorithms speed-up the solution proposal
+\item<1-> Algorithmic design tailored to the conventional OPF algorithms speed-up the solution proposal
+\item<1-> Prototype model shows convincing results for real-sized system with distributed renewables, storages and EVs
+
 \begin{enumerate}[i.]
 {\tiny
 \item A high-performance and memory-efficient sparse algorithm 
 \item Utilizing the structure of the underlying mathematical formulation}
 \end{enumerate}
-\item Optimal utilization of \textbf{stored energy} and \textbf{flexibility} where and when it creates the highest value for the system
-\item Prototype model shows convincing results for real-sized system with distributed renewables, storages and EVs
-\item Can be used for grid planning, grid operation and local markets}
 \end{itemize}
 \end{block}
+
+\onslide<2->{\begin{block}{Benefits}
+\begin{itemize}
+\item<2-> Optimal utilization of \textbf{stored energy} and \textbf{flexibility} where and when it creates the highest value for the system
+\item<3-> Can be used for grid planning, grid operation and local markets
+\end{itemize}
+\end{block}}
 \begin{enumerate}
 {\tiny 
 \item S. Zaferanlouei, H. Farahmand, V. V. Vadlamudi, M. Korpås,“BATTPOWER Toolbox: Memory-Efficient and High-Performance Multi-Period AC Optimal Power Flow Solver”, IEEE Transactions on Power Systems, Jan. 16th, 2021.
-\item S. Zaferanlouei, et al., “BATTPOWER Application: Large-Scale Integration of EVs in an Active Distribution Grid ---A Norwegian Case Study”, Electric Power Systems Research}
+\item S. Zaferanlouei, et al., “BATTPOWER Application: Large-Scale Integration of EVs in an Active Distribution Grid ---A Norwegian Case Study”, Under review in the journal of EPSR}
  \end{enumerate}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Power System--- Today}
+\centering
+\animategraphics[loop,width=10cm]{12}{Figures/gif/Today/01-}{0}{115}
+{\tiny[Reference: Joint Research Centre: Eurpean Commission Web page\\
+https://ses.jrc.ec.europa.eu/smart-grid-interactive-tool-non-flash]}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Power System--- Future}
+\centering
+\animategraphics[loop,width=10cm]{12}{Figures/gif/Future/01-}{0}{98}
+{\tiny[Reference: Joint Reseach Centre: Eurpean Commission Web page\\
+https://ses.jrc.ec.europa.eu/smart-grid-interactive-tool-non-flash]}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{frame}[plain]
 \begin{tikzpicture}[overlay, remember picture]
 \node[anchor=center] at (current page.center) {
@@ -272,7 +283,7 @@
 \begin{frame}{Statistics}
 \only<1>{
 \begin{block}{Market Share}
-Market share of electric cars (BEV and PHEV) in Norway from 2009 to 2019
+Market share of electric cars (BEV and PHEV) in Norway from 2009 to 2019[ssb.no]
 \end{block}
 \center
         \includegraphics[scale=0.4]{Figures/marketShare.png}}
@@ -321,22 +332,66 @@ Around 10\% EV penetration in Norwegian transport sector. The Norwegian Parliame
 
 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Simulations through time}
+\includegraphics[width=110mm, height=70mm]{Figures/CaseStudy/CaseStudy.png}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Simulation Results}
+{\tiny
+\begin{table}
+\def\firstrowcolor{}
+\def\secondrowcolor{}
+\onslide<1->{\def\firstrowcolor{\rowcolor{Gray}}}
+\caption{Charge Scheduling Strategies}
+\label{tab:termination}
+\begin{tabular}{l l c c} 
+\hline
+ \firstrowcolor Method & Description &\begin{tabular}[c]{@{}c@{}}Max EV\\ hosting Capacity\end{tabular}&  \\  
+  Uncoordinated/Dumb Charging&Charge on arrival time& 20\%& \includegraphics[width=.1\textwidth]{Figures/RedMark.png} \\
+ \onslide<2->{Market price based &\only<2>{\includegraphics[width=40mm, height=30mm]{Figures/CaseStudy/OsloPrice.png}}
+ & 36\%& \includegraphics[width=.1\textwidth]{Figures/YellowMark.png}} \\
+ \onslide<3->{\begin{tabular}[c]{@{}l@{}}Market price and\\ Congestion management based\end{tabular}& \only<3>{\includegraphics[width=40mm, height=30mm]{Figures/DistributionGrid26082021.png}}&100\%& \includegraphics[width=.1\textwidth]{Figures/GreenMark.png} }\\
+\hline
+\end{tabular}
+\end{table}
+}
+
+\end{frame}
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Summary}
-\begin{block}{Highlights}
-{\scriptsize
-\begin{itemize}
-\item<1-> 
-\item<2-> 
-\item<3-> 
-\item<4-> 
-\end{itemize}
-}
-\end{block}
-\end{frame}
+
+%\begin{frame}{Summary}
+%\begin{block}{Highlights}
+%{\scriptsize
+%\begin{itemize}
+%\item<1-> 
+%\item<2-> 
+%\item<3-> 
+%\item<4-> 
+%\end{itemize}
+%}
+%\end{block}
+%\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Power System--- Future}
+%\centering
+%\animategraphics[loop,width=10cm]{12}{Figures/gif/Future/01-}{0}{98}
+%\end{frame}
 
 
 \begin{frame}
