@@ -21,7 +21,7 @@ Presentaion file: ThesisPresentation.pdf
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Second one: 28-10-2020\\
-Trial lecture topic:\\
+Trial lecture topic:  
 The emerging role of fast frequency reserves
 
 (FFR) in balancing markets
