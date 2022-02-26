@@ -1,0 +1,110 @@
+%%%%% 26-02-2022 package multicol multirow
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\definecolor{Gray}{gray}{0.85}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\usepackage{hhline,longtable}
+\usepackage{tabularx,booktabs}
+
+\usepackage{multicol}
+\usepackage{multirow}
+%% 26-02-2022
+\usepackage{hhline,longtable}
+\usepackage{threeparttable}
+
+\usepackage{tabularx,booktabs}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+
+\setlist[enumerate, 1]{label =\textbf{\arabic*.}}
+\setlist[enumerate, 2]{label =\textbf{\theenumi \alph*}}
+\usepackage{array,multirow}
+
+\usepackage{amsmath,mathtools}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+
+
+
+
+
+
+
+
+
+
+%%%% animation package 21-09-2021
+\usepackage{animate}
+
+
+%%%%%%%%%%%%%%%%%09-09-2021\\\ copied from Webinarinnovation page
+% Here I would like to make a new command to change the transparency of a photo and put it as a background photo
+\usepackage{tikz}
+
+
+
+%%%%%%%%%%%% 22-10-2020 Background block package
+% beamer: How to place images behind text (z-order)
+% (http://tex.stackexchange.com/a/134311)
+\makeatletter
+\newbox\@backgroundblock
+\newenvironment{backgroundblock}[2]{%
+  \global\setbox\@backgroundblock=\vbox\bgroup%
+    \unvbox\@backgroundblock%
+    \vbox to0pt\bgroup\vskip#2\hbox to0pt\bgroup\hskip#1\relax%
+}{\egroup\egroup\egroup}
+\addtobeamertemplate{background}{\box\@backgroundblock}{}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%26-10-2020% set figure number
+\setbeamertemplate{caption}[numbered]
+
+
+%%%%%%%%%%%%%%%%26-10-2020
+\usepackage{amssymb,amsmath}
+
+
+%%%%%%%%%%%%%%%%26-10-2020
+\newenvironment{variableblock}[3]{%
+  \setbeamercolor{block body}{#2}
+  \setbeamercolor{block title}{#3}
+  \begin{block}{#1}}{\end{block}}
+  
+  \setbeamercolor{block body alerted}{bg=alerted text.fg!10}
+\setbeamercolor{block title alerted}{bg=alerted text.fg!20}
+\setbeamercolor{block body}{bg=structure!10}
+\setbeamercolor{block title}{bg=structure!20}
+\setbeamercolor{block body example}{bg=green!10}
+\setbeamercolor{block title example}{bg=green!20}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+
+%%%%%%%%%%%%%%%%%%%%%26-10-2020
+\setbeamertemplate{footline}[frame number]
+
+%%%%%%%%%%%% 26-10-2020
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.85}
+
+%%%%%%%%%%%%%%%%%%27-10-2020
+\usepackage[T1]{fontenc}
+
+
