@@ -754,6 +754,47 @@ $\mathbf{M} \in \mathbb{R}^{N_x \times N_x}$ and $\mathbf{N} \in \mathbb{R}^{N_x
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Connectivity Matrices}
+\begin{center}
+\begin{tabular}{|l l|}
+\hline
+{\tiny a term in pf equation:} & ${\begin{bmatrix} \mathbf{C}_g \end{bmatrix} \ \mkern-10mu}_{n_b \times n_g} {\begin{bmatrix}\mathbf{P}_g \end{bmatrix} \ \mkern-10mu}_{n_g \times 1} $\\
+\hline
+ \cellcolor{Gray}example: &  \cellcolor{Gray}$ {\textcolor{red}{{\begin{colorbmatrix}
+    0&  0 &0 & 0 & 0 \\
+    0&1 & 0 &0 &0\\
+0 &0 &0 &0&0\\
+    1&0 & 0 &0 &0\\
+0 &0 &0 &0&0\\
+0 &0 &1 &0&0\\
+0 &0 &0 &0&0\\
+0 &0 &0 &0&0\\
+0 &0 &0 &1&0\\
+0 &0 &0 &0&1
+\end{colorbmatrix} \ \mkern-10mu}_{n_b \times n_g}}}
+{\begin{colorbmatrix}
+    \mathbf{P}_{g_1} \\
+   \mathbf{P}_{g_2}\\ 
+\mathbf{P}_{g_3}\\
+ \mathbf{P}_{g_4}\\ 
+\mathbf{P}_{g_5}\\
+\end{colorbmatrix} \ \mkern-10mu}_{n_g \times 1}=
+{\begin{colorbmatrix}
+0\\
+     \mathbf{P}_{g_2} \\
+0\\
+   \mathbf{P}_{g_1}\\ 
+0\\
+\mathbf{P}_{g_3}\\
+0\\
+0\\
+ \mathbf{P}_{g_4}\\ 
+\mathbf{P}_{g_5}\\
+\end{colorbmatrix} \ \mkern-10mu}_{n_b \times 1}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{frame}
 %
 %%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%5
@@ -857,7 +898,6 @@ Test cases of Case9, IEEE30, IEEE118, and PEGASE1354 are part of open source MAT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
