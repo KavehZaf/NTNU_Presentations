@@ -11,9 +11,6 @@
 \usepackage{hhline,longtable}
 \usepackage{threeparttable}
 
-\usepackage{tabularx,booktabs}
-\newcommand{\tabitem}{~~\llap{\textbullet}~~}
-
 
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem}
@@ -41,8 +38,49 @@
 \def\abs{\@ifstar{\oldabs}{\oldabs*}}
 
 
+\newsavebox{\bmatrixbox}
+\newenvironment{colorbmatrix}
+  {\begin{lrbox}{\bmatrixbox}
+   \mathsurround=0pt
+   $\displaystyle
+   \begin{bmatrix}}
+  {\end{bmatrix}$%
+   \end{lrbox}%
+   \usebox{\bmatrixbox}%
+   \kern-\wd\bmatrixbox
+   \makebox[0pt][l]{$\left[\vphantom{\usebox{\bmatrixbox}}\right.$}%
+   \kern\wd\bmatrixbox
+}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+\usepackage[utf8]{inputenc}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 
+%27-02-2022%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%my colors%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{mine1}{RGB}{255, 128, 0}
+\definecolor{mine2}{RGB}{255, 202, 23}
+
+
+
+
+
+\usepackage{filecontents}% to embed the file `myreferences.bib` in your `.tex` file
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+
+\newcolumntype{C}{>{\centering\arraybackslash}X} % centered version of "X" type
+\setlength{\extrarowheight}{1pt}
+
+ \newcolumntype{b}{>{\centering\arraybackslash\hsize=2.3\hsize}X}
+\newcolumntype{s}{>{\centering\arraybackslash\hsize=.45\hsize}X}
+\newcolumntype{m}{>{\centering\arraybackslash\hsize=.9\hsize}X}
 
 
 
