@@ -69,6 +69,97 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background}
+\begin{frame}{IBM 7090}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=4 in , height=2.4 in]{Figures/ibm7090nasa.jpg}
+\caption{\tiny[Photo: NASA ]}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Items}
+\begin{itemize}
+\item <1-> \small It took up a whole room and it was state of the art when it came out in 1960!
+\item<2-> \small  It costs 2.9 million dollars u.s. at the time which is a lot more now!
+\item<3->\small It could perform a hunderd thousand floating point operation per second (we call it flops)
+\only<4>{ \begin{alertblock}{\emoji{thinking-face}}
+{\small So Does that sound fast? pretty fast?}
+\end{alertblock}}
+\only <5-> { \begin{alertblock}{\emoji{astonished-face}}
+{\small a first generation Raspberry Pi; The little thing that everybody builds their toy projects with these days was over 40 times faster!}
+\end{alertblock}}
+\end{itemize}
+\end{block}
+\begin{figure}
+\includegraphics[scale=0.2]{Figures/ibm7090nasa.jpg}
+ \caption{NASA}
+\end{figure}
+\end {frame}
+
+
+\begin{frame}
+\begin{block}{How things got better?}
+\onslide <1-> Make Bigger, Faster computers.
+\end{block}
+For a long time we just basically changed the hardware to make computers better by stuffing more transistors onto a chip and running instruction through a system more quickly. We built bigger and faster computers as they get cheaper, we can through more of them in a given problem.
+\end {frame}
+
+\begin{frame}{CPU}
+Gordon Moore has quantified this growth in 1965 when he coined Moore's law! Moore's law says that the number of components on a chip would double every 18 months.\\
+Doubling number of components every 18 months meant the computers got twice as powerful while sitting in the same space.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=3 in , height=2 in]{Figures/CPU.jpg}
+\caption{\tiny[Image bia pixabay ]}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Problems/arguments}
+However there is a few problems with this:
+\begin{enumerate}[i.]
+\item <1->{\tiny The law of Physics says that eventually you can't make a component any smaller than a certain size,}
+\item <2->  {\tiny It gets more expensive to build smaller chips as you get close to those limits.}
+\item <3-> {\tiny But customers, the people who use and buy computers and keep the computer manufacurers in business do not care!}
+\item <4-> {\tiny Programmers keep writing bigger and more complex programs and as long as the new computers are speeding up more rapidly than your software is growing, things seem to be improving!}
+\end{enumerate}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=3 in , height=2 in]{Figures/oldcomp.jpg}
+\caption{\tiny[flickr ]}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{intr.}
+When a program needs a bigger and newer computer to run it what happens to the old one? It might handed down to someone or resold or it might get thrown out,\\
+And this is not good for the planet!\\
+Also, having code only works well on the newest devices is not great for the people who can not afford the sate of the art!\\
+If you have a business, you have a problem, because you have to get your code or your website on whatever people are using, rather than what you wish they were using, So if your program is so slow, they might not be your custormer for a very long,\\
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=3 in , height=2 in]{Figures/laptop.jpg}
+\caption{\tiny[Getty images ]}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Intro}
+People want their computers keep getting better But, Just making the hardware faster is not nearly enough anymore!\\
+And Throwing more hardware at a problem can get VERY expensive.\\
+It seems crutial to modify softwares at the same time.
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
 \begin{frame}{Electricity Grid}
 \begin{figure}[!htbp]
 \centering
@@ -242,7 +333,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Power System--- Today}
 \centering
-%\animategraphics[loop,width=10cm]{12}{Figures/gif/Today/01-}{0}{115}
+\animategraphics[loop,width=10cm]{12}{Figures/gif/Today/01-}{0}{115}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -251,7 +342,7 @@
 
 \begin{frame}{Power System--- Future}
 \centering
-%\animategraphics[loop,width=10cm]{12}{Figures/gif/Future/01-}{0}{98}
+\animategraphics[loop,width=10cm]{12}{Figures/gif/Future/01-}{0}{98}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -920,6 +1011,27 @@ Test cases of Case9, IEEE30, IEEE118, and PEGASE1354 are part of open source MAT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %
 
+
+\begin {frame}{Future work}
+\begin{block}{{Goals}}
+\begin{enumerate}[i.]
+\item <1->{Translate my entire setup to C and C++.
+\begin{itemize}
+\item > Input reading
+\item > Sparsity libraries made particularly for ACOPF and MPOPF mathematical calculations.
+\item > Functions to calculate the first and second order gradients.
+\item > Rebuilt a linear customized solver for this purpose.
+\end{itemize}
+}
+\item <2-> Benchmark the entire setup with state of the art Nonlinear Solvers.
+\end{enumerate}
+\end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%
 \begin{frame}
 \centering
 Thank you for your attention!\\
