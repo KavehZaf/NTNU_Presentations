@@ -61,4 +61,19 @@ Folder containing the presentation files: 4_NTNU_TeamBatterySeminar
 Presentation File: TeamBatt.pdf  
 Presentation Text: PresentationText.md  
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Fifth one: 03-03-2021  
+Title: Introduction to a high-performace multiperiod optimal power flow solver;  
+Winter School Workshop 2022: Planning Under uncertainty in energy markets, Feburary 28th - March 4th;  
+One of the students presentations;  
+Location: Quality Hotel Skifer, Oppdal;  
+Duration 15 min,  
+Folder containing the presentation files: 5_WinterSchool_2022  
+Presentation File: WinterSchool.pdf  
+Presentation Text: I did not prepare!  
+
 
